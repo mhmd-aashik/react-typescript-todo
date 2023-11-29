@@ -1,14 +1,19 @@
-type CourseGoalprops = {
-  title: string;
-  description: string;
-};
+import React, { PropsWithChildren } from "react";
 
-const CourseGoal = ({ title, description }: CourseGoalprops) => {
+// type CourseGoalprops = {
+//   title: string;
+//   children: React.ReactNode;
+// };
+
+//altenative way of defining choldren props
+type CourseGoalprops = PropsWithChildren<{ title: string }>;
+
+const CourseGoal = ({ title, children }: CourseGoalprops) => {
   return (
     <article>
       <div>
         <h2>{title}</h2>
-        <p>{description}</p>
+        {children}
       </div>
       <button>Delete</button>
     </article>
