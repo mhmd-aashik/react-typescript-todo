@@ -1,3 +1,9 @@
+import CourseGoal from "../components/CourseGoal.tsx";
+
 export default function App() {
-  return <div>App</div>;
+  return (
+    <main>
+      <CourseGoal />
+    </main>
+  );
 }
