@@ -4,7 +4,7 @@ type HeaderProps = {
   image: {
     src: string;
     alt: string;
-  }; 
+  };
   children: React.ReactNode;
 };
 
