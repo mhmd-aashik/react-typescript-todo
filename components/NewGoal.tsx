@@ -1,10 +1,13 @@
 import React, { FormEvent, useRef } from "react";
 
 const NewGoal = () => {
-  const goalRef = useRef(null);
-  const summaryRef = useRef(null);
+  const goalRef = useRef<HTMLInputElement>(null);
+  const summaryRef = useRef<HTMLInputElement>(null);
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!goalRef.current?.value && !summaryRef.current?.value) return;
+    const enteredGoal = goalRef.current?.value;
+    const summaryEntered = summaryRef.current?.value;
   }
   return (
     <form onSubmit={handleSubmit}>
